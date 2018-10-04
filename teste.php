@@ -1,3 +1,9 @@
+<?php	
+	require('model/mysql.php');
+    require('php_func.php');
+    $BDO = new MySqlModel("clientes");
+    $clientes = $BDO->buscar("Cliente",null, null, null, null);
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -29,7 +35,7 @@
 				      	<div class="chips chips-autocomplete"></div>
 				    </div>
 				    <div class="col s2">
-				      	<button id="gogogadget" class="btn waves-effect waves-light" type="submit" name="action">Burgers</button>
+				      	<button id="gogogadget" class="btn waves-effect waves-light" type="submit" name="action">Clientes</button>
 				    </div>
 			  	</div>
 			</form>
@@ -40,18 +46,16 @@
 		<script type="text/javascript">
 		 	var elems = document.querySelectorAll('.chips')
     		var instances = M.Chips.init(elems, {
-	         		placeholder: 'Enter burgers',
-	         		name: 'burgers',
+	         		placeholder: 'Enter clientes',
+	         		name: 'Clientes',
 	         		autocompleteOptions: {
 	           		data: {
-						'cheese': null,
-						'bacon': null,
-						'chicken': null,
-						'frog': null,
-						'croc': null,
-						'rat': null,
-						'snail': null,
-						'earth worm': null
+						<?php
+			                foreach ($clientes as $cliente){
+			                	echo '"'.$cliente['Cliente'].'": null,';
+			                }
+
+		      			?>
 	           		},
 	           		limit: 5,
 	           		minLength: 1
@@ -59,13 +63,15 @@
 			});
 
   			document.getElementById("gogogadget").addEventListener("click", function(event){
-     	 		event.preventDefault();
-      			console.error(instances[0].chipsData[0].tag);
-      			var array = [instances[0].chipsData[0].tag,instances[0].chipsData[1].tag];
+      			var array = [];
+      			for (var i = instances[0].chipsData.length - 1; i >= 0; i--) {
+      				array.push(instances[0].chipsData[i].tag);
+      			}
+      			
       			$.ajax({
 	                url: 'postTeste.php',
 	                method: 'post',
-	                data:array,
+	                data:{list:""+array+""},
 	                success: function(data){
 
 	                    alert(data);

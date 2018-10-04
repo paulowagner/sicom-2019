@@ -1,4 +1,4 @@
 <?php
-	echo $_POST['MeuParametro'][0]['tag'];
-	var_dump($_POST);
+	$clientes = explode(",", $_POST['list']);
+	var_dump($clientes);
 ?>
