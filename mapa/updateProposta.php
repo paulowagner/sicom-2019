@@ -32,5 +32,6 @@
             });
         });
         $('select').formSelect();
+        M.updateTextFields();
     });
 </script>

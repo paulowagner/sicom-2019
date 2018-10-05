@@ -123,6 +123,7 @@
     ?>
 </div>
 <script type="text/javascript">
+    M.updateTextFields();
     var i;
     var mes_enviado = <?php echo json_encode($mes_enviado);?>;
     var mes_aceita = <?php echo json_encode($mes_aceita);?>;

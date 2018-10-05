@@ -1,8 +1,8 @@
 <?php	
 	require('model/mysql.php');
     require('php_func.php');
-    $BDO = new MySqlModel("clientes");
-    $clientes = $BDO->buscar("Cliente",null, null, null, null);
+    $BDO = new MySqlModel("estoque");
+    $itens = $BDO->buscar("Descricao as item",null, null, null, null);
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,18 +27,21 @@
 
 	<body>
 		<div class="row">
-			
-
 			<form id="teste">
 				<div class="row">
 				    <div class="col s10">
 				      	<div class="chips chips-autocomplete"></div>
 				    </div>
 				    <div class="col s2">
-				      	<button id="gogogadget" class="btn waves-effect waves-light" type="submit" name="action">Clientes</button>
+				      	<a id="gogogadget" class="btn waves-effect waves-light">Itens</a>
 				    </div>
 			  	</div>
 			</form>
+		</div>
+		<div class="row">
+			<div class="col s12" id="formItens">
+				
+			</div>
 		</div>
 		<!--JavaScript at end of body for optimized loading-->
 		<script type="text/javascript" src="js/materialize.min.js"></script>
@@ -46,13 +49,13 @@
 		<script type="text/javascript">
 		 	var elems = document.querySelectorAll('.chips')
     		var instances = M.Chips.init(elems, {
-	         		placeholder: 'Enter clientes',
-	         		name: 'Clientes',
+	         		placeholder: 'Enter itens',
+	         		name: 'Itens',
 	         		autocompleteOptions: {
 	           		data: {
 						<?php
-			                foreach ($clientes as $cliente){
-			                	echo '"'.$cliente['Cliente'].'": null,';
+			                foreach ($itens as $item){
+			                	echo '"'.$item['item'].'": null,';
 			                }
 
 		      			?>
@@ -62,7 +65,7 @@
 	         	}
 			});
 
-  			document.getElementById("gogogadget").addEventListener("click", function(event){
+  			$("#gogogadget").click(function(){
       			var array = [];
       			for (var i = instances[0].chipsData.length - 1; i >= 0; i--) {
       				array.push(instances[0].chipsData[i].tag);
@@ -73,8 +76,7 @@
 	                method: 'post',
 	                data:{list:""+array+""},
 	                success: function(data){
-
-	                    alert(data);
+	                	$('#formItens').html(data);
 	                }
 	            });
 			});

@@ -63,4 +63,5 @@
 </form>
 <script type="text/javascript">
     $('select').formSelect();
+    M.updateTextFields();
 </script>
