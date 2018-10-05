@@ -1,0 +1,68 @@
+
+1
+Criar grupos técnicos e administrativos
+
+
+2
+Separar ações de "status"
+
+
+3
+Criar botões de atalhos para ações corriqueiras (para agilizar)
+
+
+4
+Criar sistema de SA
+
+	Visão geral de fluxo de autorização e execução:
+	Preenchimento
+	Validação Técnica
+	Aprovador
+	Validação Compras
+	Comprar
+	Validação do solicitante
+
+	Fluxo do material (com datas):
+	Aguardando compra
+	Compra em andamento
+	Em transito do fornecedor
+	Em transito para solicitante
+	Recebido pelo solicitante
+	
+	
+	Opção de abrir não conformidade (para o comprado ou o solicitante)
+
+
+	Reposição de estoque: Criar opção de abrir SA dos últimos itens vendidos no site em determinado período (botão atalho)
+
+	Quem abriu, cargo, área, data, número
+	
+	Item, descrição, quant, unid, prazo, inspeção
+
+	Para cada item, opção de Requisito e Aplicação
+
+	Envia para aprovador
+
+	Campo de observações
+
+	Campo Produto não conforme
+
+	Campo responsável pelo fechamento da SA
+
+5
+Solicitação de propostas:
+Técnico solicita envio de proposta pelo sistema
+Gera uma demanda no Comercial
+Este gera uma proposta que, se aprovada, abre uma ordem de serviço para o grupo técnico
+Este agenda e executa e fecha a OS
+Gera uma demanda para o Faturamento
+Gera uma demanda para pós-venda
+
+
+6
+Controle de check list de veículos
+
+7
+Registro de não conformidade para cada área (SA, OS, proposta, etc)
+
+

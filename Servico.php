@@ -26,7 +26,8 @@
 </div>
 <script type="text/javascript">
     $(document).ready(function(){
-  		$('.tabs').tabs();
+        M.updateTextFields();
+        $('.tabs').tabs();
     	$('input.autocomplete').autocomplete({
       		data: {
       			<?php

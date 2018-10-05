@@ -25,7 +25,7 @@
         <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script language="javascript" src="../sicom/view/js/scripts.js"></script>
+        <script language="javascript" src="js/scripts.js"></script>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -109,7 +109,7 @@
                 $('html, body').animate({scrollTop:0}, 'slow');
             });
             $.ajax({
-                url: 'dashboard.php',
+                url: 'sa.php',
                 method: 'post',
                 success: function(data){
 
