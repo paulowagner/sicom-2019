@@ -16,7 +16,7 @@
     	<div class="row">
         	<div class="input-field col s12">
           		<i class="material-icons prefix">textsms</i>
-  				<input type="text" id="autocomplete-input" class="autocomplete">
+  				    <input type="text" id="autocomplete-input" class="autocomplete">
           		<label for="autocomplete-input">Cliente</label>
         	</div>
       	</div>

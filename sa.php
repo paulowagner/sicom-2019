@@ -7,7 +7,7 @@
     $itens = $BDO->buscar("Descricao as item",null, null, null, null);
 ?>
 <h4 style="text-align: center">SA</h4>
-<form class="col s12" action="action/salvar.php" method="post">
+<form class="col s12" method="post">
     <div class="row">
         <div class="input-field col s3">
             <input id="Tecnico autocomplete-input" name="Tecnico" type="text" class="autocomplete">
