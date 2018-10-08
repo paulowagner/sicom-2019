@@ -79,7 +79,7 @@
     $("#gogogadget").click(function(){
         var array = [];
         for (var i = instances[0].chipsData.length - 1; i >= 0; i--) {
-            array.push(instances[0].chipsData[i].tag);
+            array.push(instances[0].chipsData[i].tag.replace(",", "§"));
         }
         
         $.ajax({

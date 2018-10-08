@@ -9,7 +9,7 @@
 			echo '
 	<div class="row">
         <div class="input-field col s5">
-      		<input disabled id="item'.$i.'" type="text" class="validate" value="'.$item[$i].'"  >
+      		<input disabled id="item'.$i.'" type="text" class="validate" value="'.str_replace("§", ",", $item[$i]).'"  >
       		<label for="item'.$i.'">Item</label>
         </div>
         <div class="input-field col s1">

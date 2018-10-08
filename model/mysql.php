@@ -31,7 +31,6 @@ class MySqlModel{
         }
         return $retorno;
     }
-
 	public function buscar($select = null,$where = null, $limit = null, $offset = null, $orderby = null) {
         $select = ($select != null ? "{$select}" : "*");
         $where = ($where != null ? "WHERE {$where}" : "");

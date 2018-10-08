@@ -2,7 +2,7 @@
 	require('../model/mysql.php');
     require('../php_func.php');
     $BDO = new MySqlModel("servico");
-    $itens = $BDO->buscar("DISTINCT NSerie","char_length(NSerie) = 10", null, null, null);
+    $Assets = $BDO->buscar("DISTINCT NSerie","char_length(NSerie) = 10", null, null, null);
 ?>
 
 <form id="teste">
@@ -25,13 +25,13 @@
     M.updateTextFields();
     var elems = document.querySelectorAll('.asset')
     var instancesAsset = M.Chips.init(elems, {
-            placeholder: 'Enter itens',
-            name: 'Itens',
+            placeholder: "Enter Asset's",
+            name: 'Asset',
             autocompleteOptions: {
             data: {
                 <?php
-                    foreach ($itens as $item){
-                        echo '"'.$item['NSerie'].'": null,';
+                    foreach ($Assets as $asset){
+                        echo '"'.$asset['NSerie'].'": null,';
                     }
 
                 ?>
