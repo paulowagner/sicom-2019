@@ -14,7 +14,19 @@
         </div>
         <div class="input-field col s1">
       		<input id="quant'.$i.'" type="text" class="validate" value="0">
-      		<label for="quant'.$i.'">Quantidade</label>
+      		<label for="quant'.$i.'">Quant.</label>
+        </div>
+        <div class="input-field col s1">
+      		<input id="uni'.$i.'" type="text" class="validate">
+      		<label for="uni'.$i.'">Uni.</label>
+        </div>
+        <div class="input-field col s1">
+      		<input id="prazo'.$i.'" type="number" class="validate" min="0">
+      		<label for="prazo'.$i.'">Prazo</label>
+        </div>
+        <div class="input-field col s1">
+      		<input id="insp'.$i.'" type="text" class="validate">
+      		<label for="insp'.$i.'">Inspeção</label>
         </div>
   	</div>
 

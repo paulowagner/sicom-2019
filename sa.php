@@ -47,7 +47,6 @@
 </div>
 <script type="text/javascript">
     $('select').formSelect();
-    M.updateTextFields();
     $('input.autocomplete').autocomplete({
             data: {
                 <?php
@@ -72,7 +71,7 @@
                 ?>
             },
             limit: 5,
-            minLength: 1
+            minLength: 1,
         }
     });
 
@@ -91,4 +90,5 @@
             }
         });
     });
+    M.updateTextFields();
 </script>

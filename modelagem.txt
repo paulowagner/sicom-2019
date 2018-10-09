@@ -65,4 +65,9 @@ Controle de check list de veículos
 7
 Registro de não conformidade para cada área (SA, OS, proposta, etc)
 
+8
+Registro de atividades
+
+9
+
 
