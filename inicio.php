@@ -105,11 +105,19 @@
         <!--JavaScript at end of body for optimized loading-->
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script type="text/javascript">
+            function hide() {
+                $('.divAba').css({display:"none"});
+                $('#divOculta').css({display:"block"});
+            }
+            function show() {
+                $('.divAba').css({display:"block"});
+                $('#divOculta').css({display:"none"});
+            }
             $('#topPag').click(function () {
                 $('html, body').animate({scrollTop:0}, 'slow');
             });
             $.ajax({
-                url: 'sa.php',
+                url: 'dashboard.php',
                 method: 'post',
                 success: function(data){
 

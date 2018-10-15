@@ -5,12 +5,14 @@
         	<li class="tab"><a class="AbasAdmin" id="2" href="#Item">Itens</a></li>
         	<li class="tab"><a class="AbasAdmin" id="3" href="#Contrato">Contratos</a></li>
         	<li class="tab"><a class="AbasAdmin" id="4" href="#Asset">Asset's</a></li>
+        	<li class="tab"><a class="AbasAdmin" id="5" href="#SA">SA</a></li>
       	</ul>
     </div>
     <div id="Clientes" class="col s12"></div>
     <div id="Item" class="col s12"></div>
     <div id="Contrato" class="col s12"></div>
     <div id="Asset" class="col s12"></div>
+    <div id="SA" class="col s12"></div>
 </div>
 <script type="text/javascript">
     $(document).ready(function(){
@@ -38,6 +40,14 @@
 			        method: 'post',
 			        success: function(data){
 			            $('#Asset').html(data);
+			        }
+			    });
+    		}else if(this.id == 5){
+    			$.ajax({
+			        url: 'geral/sa.php',
+			        method: 'post',
+			        success: function(data){
+			            $('#SA').html(data);
 			        }
 			    });
     		}
