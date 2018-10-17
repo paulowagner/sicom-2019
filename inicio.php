@@ -127,7 +127,7 @@
             $('.sidenavop').click(function () {
                 $('#tabCab').tabs('select', "test"+this.id);
                 $('.sidenav').sidenav('close');
-                if (this.id == 2 && $('#test2').html()=="") {
+                if (this.id == 2 /*&& $('#test2').html()==""*/) {
                     $.ajax({
                         url: 'Administrativo.php',
                         method: 'post',
@@ -136,7 +136,16 @@
                             $('#test2').html(data);
                         }
                     });
-                }else if (this.id == 3 && $('#test3').html()=="") {
+                }else if (this.id == 1 /*&& $('#test3').html()==""*/) {
+                    $.ajax({
+                        url: 'dashboard.php',
+                        method: 'post',
+                        success: function(data){
+
+                            $('#test1').html(data);
+                        }
+                    });
+                }else if (this.id == 3 /*&& $('#test3').html()==""*/) {
                     $.ajax({
                         url: 'Servico.php',
                         method: 'post',
@@ -145,7 +154,7 @@
                             $('#test3').html(data);
                         }
                     });
-                }else if (this.id == 4 && $('#test4').html()=="") {
+                }else if (this.id == 4 /*&& $('#test4').html()==""*/) {
                     $.ajax({
                         url: 'Relatorios.php',
                         method: 'post',
@@ -154,7 +163,7 @@
                             $('#test4').html(data);
                         }
                     });
-                }else if (this.id == 5 && $('#test5').html()=="") {
+                }else if (this.id == 5 /*&& $('#test5').html()==""*/) {
                     $.ajax({
                         url: 'Mapas.php',
                         method: 'post',
@@ -163,7 +172,7 @@
                             $('#test5').html(data);
                         }
                     });
-                }else if (this.id == 6 && $('#test6').html()=="") {
+                }else if (this.id == 6 /*&& $('#test6').html()==""*/) {
                     $.ajax({
                         url: 'Gerenciamento.php',
                         method: 'post',

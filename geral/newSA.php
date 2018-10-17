@@ -7,7 +7,7 @@
     $itens = $BDO->buscar("Descricao as item",null, null, null, null);
 ?>
 <h4 style="text-align: center">Nova SA</h4>
-<form class="col s12" method="post">
+<form class="col s12" method="post" id="newSAForm">
     <div class="row">
         <div class="input-field col s3">
             <input id="Tecnico autocomplete-input" name="Tecnico" type="text" class="autocomplete">
@@ -19,13 +19,13 @@
         </div>
         <div class="input-field col s3">
             <label>
-                <input type="checkbox" />
+                <input type="checkbox" name="autorizado" />
                 <span>Autorização</span>
             </label>
         </div>
         <div class="input-field col s3">
             <label>
-                <input type="checkbox" />
+                <input type="checkbox" name="enviado" />
                 <span>Enviado</span>
             </label>
         </div>
@@ -80,11 +80,14 @@
         for (var i = instances[0].chipsData.length - 1; i >= 0; i--) {
             array.push(instances[0].chipsData[i].tag.replace(",", "§"));
         }
-        
         $.ajax({
             url: 'geral/saList.php',
             method: 'post',
             data:{list:""+array+""},
+            beforeSend: function(xhr, settings){
+                settings.data += '&'+$('#newSAForm').serialize();
+                alert(settings.data);
+            },
             success: function(data){
                 $('#formItens').html(data);
             }

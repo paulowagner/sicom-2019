@@ -36,7 +36,7 @@
 			    });
     		}else if(this.id == 4 && $('#Asset').html()==""){
     			$.ajax({
-			        url: 'administrativo/asset.php',
+			        url: 'geral/asset.php',
 			        method: 'post',
 			        success: function(data){
 			            $('#Asset').html(data);
