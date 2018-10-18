@@ -11,44 +11,43 @@
     <div id="gertest2" class="col s12"></div>
     <div id="gertest3" class="col s12"></div>
     <div id="gertest4" class="col s12"></div>
-  </div>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.Gerenciar').tabs();
-            $('.AbasGerenciar').click(function () {
-                if(this.id == 2 && $('#gertest2').html()==""){
-                    $.ajax({
-                        url: 'gerenciamento/AddUsuario.php',
-                        method: 'post',
-                        success: function(data){
-                            $('#gertest2').html(data);
-                        }
-                    });
-                }else if(this.id == 3 && $('#gertest3').html()==""){
-                    $.ajax({
-                        url: 'gerenciamento/gerenciarPerfis.php',
-                        method: 'post',
-                        success: function(data){
-                            $('#gertest3').html(data);
-                        }
-                    });
-                }else if(this.id == 4 && $('#gertest4').html()==""){
-                    $.ajax({
-                        url: 'gerenciamento/gerenciarEmails.php',
-                        method: 'post',
-                        success: function(data){
-                            $('#gertest4').html(data);
-                        }
-                    });
-                }
-            });
-            $.ajax({
-                url: 'gerenciamento/gerenciarUsuarios.php',
-                method: 'post',
-                success: function(data){
-                    $('#gertest1').html(data);
-                }
-            });
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.Gerenciar').tabs();
+        $('.AbasGerenciar').click(function () {
+            if(this.id == 2 && $('#gertest2').html()==""){
+                $.ajax({
+                    url: 'gerenciamento/AddUsuario.php',
+                    method: 'post',
+                    success: function(data){
+                        $('#gertest2').html(data);
+                    }
+                });
+            }else if(this.id == 3 && $('#gertest3').html()==""){
+                $.ajax({
+                    url: 'gerenciamento/gerenciarPerfis.php',
+                    method: 'post',
+                    success: function(data){
+                        $('#gertest3').html(data);
+                    }
+                });
+            }else if(this.id == 4 && $('#gertest4').html()==""){
+                $.ajax({
+                    url: 'gerenciamento/gerenciarEmails.php',
+                    method: 'post',
+                    success: function(data){
+                        $('#gertest4').html(data);
+                    }
+                });
+            }
         });
-      
-    </script>
+        $.ajax({
+            url: 'gerenciamento/gerenciarUsuarios.php',
+            method: 'post',
+            success: function(data){
+                $('#gertest1').html(data);
+            }
+        });
+    });
+</script>
