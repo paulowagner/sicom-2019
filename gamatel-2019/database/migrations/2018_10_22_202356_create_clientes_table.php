@@ -14,7 +14,17 @@ class CreateClientesTable extends Migration
     public function up()
     {
         Schema::create('clientes', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->string('Cliente');
+            $table->string('CEP');
+            $table->string('SegCod');
+            $table->string('Endereco');
+            $table->string('Bairro');
+            $table->string('Cidade');
+            $table->string('Estado');
+            $table->string('CNPJ');
+            $table->string('InsEst');
             $table->timestamps();
         });
     }
