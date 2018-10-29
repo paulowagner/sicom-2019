@@ -13,8 +13,18 @@ class CreateSAMaterialsTable extends Migration
      */
     public function up()
     {
-        Schema::create('s_a_materials', function (Blueprint $table) {
+        Schema::create('sa_materiais', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('prazo');//urgente - pouco urgente - normal
+            $table->string('uni');// PC - MTS
+            $table->string('insp');
+            $table->float('quant',8,3);
+            $table->float('quant_entregue',8,3);
+            $table->unsignedInteger('aplicacao');
+            $table->unsignedInteger('aprovado');
+            $table->unsignedInteger('fechamento');
+            $table->unsignedInteger('id_item');
+            $table->foreign('id_item')->references('id')->on('Estoque');
             $table->timestamps();
         });
     }
@@ -26,6 +36,6 @@ class CreateSAMaterialsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('s_a_materials');
+        Schema::dropIfExists('sa_materiais');
     }
 }

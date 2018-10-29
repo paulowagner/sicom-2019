@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGrupoTecOSTable extends Migration
+class CreateArquivosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateGrupoTecOSTable extends Migration
      */
     public function up()
     {
-        Schema::create('grupo_tec_os', function (Blueprint $table) {
+        Schema::create('arquivos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nome');
+            $table->string('type');
+            $table->unsignedInteger('size');
             $table->unsignedInteger('id_os');
             $table->foreign('id_os')->references('id')->on('os');
-            $table->unsignedInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateGrupoTecOSTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('grupo_tec_os');
+        Schema::dropIfExists('arquivos');
     }
 }

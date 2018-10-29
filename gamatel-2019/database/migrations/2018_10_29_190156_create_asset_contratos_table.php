@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAtividadesTable extends Migration
+class CreateAssetContratosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateAtividadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('atividades', function (Blueprint $table) {
+        Schema::create('asset_contratos', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('id_os');
-            $table->foreign('id_os')->references('id')->on('os');
-            $table->unsignedInteger('id_user');
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->integer('id_asset')->unsigned();
+            $table->foreign('id_asset')->references('id')->on('assets');
+            $table->integer('id_contrato')->unsigned();
+            $table->foreign('id_contrato')->references('id')->on('contratos');
             $table->time('inicio');
             $table->time('fim');
+            $table->string('statusEntrega');
             $table->timestamps();
         });
     }
@@ -32,6 +33,6 @@ class CreateAtividadesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('atividades');
+        Schema::dropIfExists('asset_contratos');
     }
 }

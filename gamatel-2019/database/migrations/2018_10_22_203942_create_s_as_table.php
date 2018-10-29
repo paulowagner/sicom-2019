@@ -13,8 +13,13 @@ class CreateSAsTable extends Migration
      */
     public function up()
     {
-        Schema::create('s_as', function (Blueprint $table) {
+        Schema::create('sas', function (Blueprint $table) {
             $table->increments('id');
+            $table->time('data');
+            $table->string('nSA');
+            $table->string('obs');
+            $table->unsignedInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -26,6 +31,6 @@ class CreateSAsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('s_as');
+        Schema::dropIfExists('sas');
     }
 }

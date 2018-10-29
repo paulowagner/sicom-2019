@@ -15,6 +15,11 @@ class CreateEntregasTable extends Migration
     {
         Schema::create('entregas', function (Blueprint $table) {
             $table->increments('id');
+            $table->time('data');
+            $table->unsignedInteger('id_contato');
+            $table->foreign('id_contato')->references('id')->on('contatos');
+            $table->unsignedInteger('id_asset_contrato');
+            $table->foreign('id_asset_contrato')->references('id')->on('asset_contratos');
             $table->timestamps();
         });
     }

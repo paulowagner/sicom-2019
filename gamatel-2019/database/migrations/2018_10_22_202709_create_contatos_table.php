@@ -15,6 +15,11 @@ class CreateContatosTable extends Migration
     {
         Schema::create('contatos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('Nome');
+            $table->string('Email');
+            $table->string('Telefone');
+            $table->integer('idCliente')->unsigned();
+            $table->foreign('idCliente')->references('id')->on('clientes');
             $table->timestamps();
         });
     }

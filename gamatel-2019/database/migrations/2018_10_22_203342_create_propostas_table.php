@@ -15,6 +15,15 @@ class CreatePropostasTable extends Migration
     {
         Schema::create('propostas', function (Blueprint $table) {
             $table->increments('id');
+            $table->time('data');
+            $table->string('natureza');
+            $table->string('analiseCritica');
+            $table->string('nProposta');
+            $table->float('valor', 8, 2);
+            $table->string('status');
+            $table->string('obs');
+            $table->integer('idCliente')->unsigned();
+            $table->foreign('idCliente')->references('id')->on('clientes');
             $table->timestamps();
         });
     }
