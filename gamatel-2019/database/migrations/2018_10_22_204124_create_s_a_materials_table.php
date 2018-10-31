@@ -24,7 +24,9 @@ class CreateSAMaterialsTable extends Migration
             $table->unsignedInteger('aprovado');
             $table->unsignedInteger('fechamento');
             $table->unsignedInteger('id_item');
-            $table->foreign('id_item')->references('id')->on('Estoque');
+            $table->foreign('id_item')->references('id')->on('estoques');
+            $table->unsignedInteger('id_sa');
+            $table->foreign('id_sa')->references('id')->on('sas');
             $table->timestamps();
         });
     }

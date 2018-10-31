@@ -17,15 +17,21 @@ class CreateOSTable extends Migration
             $table->increments('id');
             $table->string('prioridade');
             $table->string('categoria');
+            $table->string('centroCusto');
+            $table->string('chamadoEXT');
+            $table->string('status');
+            $table->string('motivoStatus');
+            $table->string('modelo');
+
+            $table->unsignedInteger('id_nserieId');
+            $table->foreign('id_nserieId')->references('id')->on('assets');
+
             $table->unsignedInteger('id_contrato');
             $table->foreign('id_contrato')->references('id')->on('contratos');
-            $table->unsignedInteger('id_grupo_os');
-            $table->foreign('id_grupo_os')->references('id')->on('grupo_tec_os');
 
             $table->unsignedInteger('id_contato');
             $table->foreign('id_contato')->references('id')->on('contatos');
-            $table->unsignedInteger('id_contrato');
-            $table->foreign('id_os')->references('id')->on('os');
+
 
             $table->timestamps();
         });

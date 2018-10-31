@@ -19,6 +19,7 @@ class CreateEstoquesTable extends Migration
             $table->string('codigoNCM');
             $table->string('codigoFornecedor');
             $table->string('codigoSAP');
+            $table->integer('ativo');
             $table->float('valor', 8, 2);
             $table->float('quant',8,3);
             $table->float('vitoria_estoqueInterno',8,3);

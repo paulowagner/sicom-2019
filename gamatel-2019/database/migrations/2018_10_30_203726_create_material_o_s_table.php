@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAuditoriasTable extends Migration
+class CreateMaterialOSTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,15 @@ class CreateAuditoriasTable extends Migration
      */
     public function up()
     {
-        Schema::create('auditorias', function (Blueprint $table) {
+        Schema::create('material_os', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('log');
-            $table->unsignedInteger('id_contrato');
-            $table->foreign('id_contrato')->references('id')->on('contratos');
+            $table->float('valor', 8, 2);
+            $table->float('quant',8,3);
+            $table->float('faturado',8,3);
             $table->unsignedInteger('id_os');
             $table->foreign('id_os')->references('id')->on('os');
+            $table->unsignedInteger('id_item');
+            $table->foreign('id_item')->references('id')->on('estoques');
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ class CreateAuditoriasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('auditorias');
+        Schema::dropIfExists('material_os');
     }
 }

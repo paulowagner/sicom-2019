@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/sicom', function () {
+    return view('sicom.index');
+});
+Route::post('/cadCliente', function () {
+    return view('sicom/cadCliente');
+});
+Route::get('/sicom/gerenciamento/addUser',['as'=>'sicom.gerenciamento.addUser','uses'=>'userController@viewAddcontroller']);

@@ -17,6 +17,7 @@ class CreateAssetsTable extends Migration
             $table->increments('id');
             $table->string('nserieId');
             $table->string('modelo');
+            $table->time('compradoEm');
             $table->string('status');
             $table->timestamps();
         });
