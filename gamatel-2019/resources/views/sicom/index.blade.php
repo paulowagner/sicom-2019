@@ -5,7 +5,7 @@
         <div class="nav-wrapper blue">
             <a href="#" class="brand-logo center">SICOM</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="collapsible.html">Sair</a></li>
+                <li><a href="{{route('sicom.logout')}}">Sair</a></li>
             </ul>
         </div>
     </nav>
@@ -139,7 +139,7 @@
                 });
             }else if (this.id == 6 /*&& $('#test6').html()==""*/) {
                 $.ajax({
-                    url: '{{route('sicom.gerenciamento.addUser')}}',
+                    url: '{{url('/sicom/gerenciamento/addUser')}}',
                     method: 'get',
                     success: function(data){
 
