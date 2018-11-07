@@ -16,12 +16,12 @@
                     <img src="https://loga.us/wp-content/uploads/2017/03/hamdesk1.png">
                 </div>
                 <a><img class="circle" src="{{asset('img/paulinho.jpeg')}}"></a>
-                <a><span class="white-text name">Paulo Wagner Cardoso Gama Vasconcelos</span></a>
-                <a><span class="white-text email">paulowvasconcelos@gmail.com</span></a>
+                <a><span class="white-text name">{{Auth::user()->name}}</span></a>
+                <a><span class="white-text email">{{Auth::user()->email}}</span></a>
             </div>
         </li>
         <li><a id="1" class="waves-effect sidenavop">DashBoard</a></li>
-        <li><a id="2" class="waves-effect sidenavop">Administrativo</a></li>
+        <li><a id="2" class="waves-effect sidenavop">Comercial</a></li>
         <li><a id="3" class="waves-effect sidenavop">Serviço</a></li>
         <li><a id="4" class="waves-effect sidenavop">Relatorios</a></li>
         <li><a id="5" class="waves-effect sidenavop">Mapas</a></li>
@@ -82,7 +82,7 @@
             $('html, body').animate({scrollTop:0}, 'slow');
         });
         $.ajax({
-            url: 'dashboard.php',
+            url: '{{url('/sicom/dashboard')}}',
             method: 'post',
             success: function(data){
 
@@ -94,8 +94,8 @@
             $('.sidenav').sidenav('close');
             if (this.id == 2 /*&& $('#test2').html()==""*/) {
                 $.ajax({
-                    url: 'Administrativo.php',
-                    method: 'post',
+                    url: '{{url('/sicom/comercial')}}',
+                    method: 'get',
                     success: function(data){
 
                         $('#test2').html(data);
@@ -103,8 +103,8 @@
                 });
             }else if (this.id == 1 /*&& $('#test3').html()==""*/) {
                 $.ajax({
-                    url: 'dashboard.php',
-                    method: 'post',
+                    url: '{{url('/sicom/dashboard')}}',
+                    method: 'get',
                     success: function(data){
 
                         $('#test1').html(data);
@@ -112,8 +112,8 @@
                 });
             }else if (this.id == 3 /*&& $('#test3').html()==""*/) {
                 $.ajax({
-                    url: 'Servico.php',
-                    method: 'post',
+                    url: '{{url('/sicom/servico')}}',
+                    method: 'get',
                     success: function(data){
 
                         $('#test3').html(data);
@@ -122,7 +122,7 @@
             }else if (this.id == 4 /*&& $('#test4').html()==""*/) {
                 $.ajax({
                     url: 'Relatorios.php',
-                    method: 'post',
+                    method: 'get',
                     success: function(data){
 
                         $('#test4').html(data);
@@ -131,7 +131,7 @@
             }else if (this.id == 5 /*&& $('#test5').html()==""*/) {
                 $.ajax({
                     url: 'Mapas.php',
-                    method: 'post',
+                    method: 'get',
                     success: function(data){
 
                         $('#test5').html(data);
@@ -144,6 +144,15 @@
                     success: function(data){
 
                         $('#test6').html(data);
+                    }
+                });
+            }else if (this.id == 7 /*&& $('#test6').html()==""*/) {
+                $.ajax({
+                    url: '{{url('/sicom/gerenciamento/updateUser')}}',
+                    method: 'get',
+                    success: function(data){
+
+                        $('#test7').html(data);
                     }
                 });
             }  

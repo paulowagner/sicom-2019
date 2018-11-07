@@ -32,18 +32,24 @@
 	        </div>
 	        <div class="input-field col s4">
 			    <select multiple name="permissao" id="mySelect">
-			      	<option value="1">OS Admim</option>
-			      	<option value="2">OS Restrito</option>
-			      	<option value="4">Contrato Admin</option>
-			      	<option value="8">Contrato Restrito</option>
-			      	<option value="16">Cliente Admin</option>
-			      	<option value="32">Cliente Restrito</option>
-			      	<option value="64">Estoque Admin</option>
-			      	<option value="128">Estoque Restrito</option>
-			      	<option value="256">Asset Admin</option>
-			      	<option value="512">Asset Restrito</option>
-			      	<option value="1024">SA Admin</option>
-			      	<option value="2048">SA Restrito</option>
+			      	<option value="1">Tecnico</option>
+			      	<option value="2">Comercial</option>
+			      	<option value="4">Administrativo</option>
+			      	<option value="8">Gerente</option>
+			      	<option value="16">OS Admim</option>
+			      	<option value="32">OS Restrito</option>
+			      	<option value="64">Contrato Admin</option>
+			      	<option value="128">Contrato Restrito</option>
+			      	<option value="256">Cliente Admin</option>
+			      	<option value="512">Cliente Restrito</option>
+			      	<option value="1024">Estoque Admin</option>
+			      	<option value="2048">Estoque Restrito</option>
+			      	<option value="4096">Asset Admin</option>
+			      	<option value="8192">Asset Restrito</option>
+			      	<option value="16384">SA Admin</option>
+			      	<option value="32768">SA Restrito</option>
+			      	<option value="65536">Mapas Admin</option>
+			      	<option value="131072">Mapas Restrito</option>
 			    </select>
 			    <label>Permissões</label>
 		  	</div>

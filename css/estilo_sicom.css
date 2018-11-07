@@ -1,0 +1,266 @@
+/*
+* 
+* @author Jamilton Damasceno
+* @version 0.1
+*/
+
+/* ========================= layout ======================== */
+@media screen and (max-width: 767px){
+	.size-dir {
+		font-size: 40px;
+	}
+}
+@media screen and (min-width: 768px){
+	.size-dir {
+
+	}
+}
+html, body, .capa {
+	height: 100%;
+}
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
+
+body {
+	padding-top: 75px;
+	background-color: #fff;
+	background-attachment: fixed;
+	font-family: Helvetica,Arial,sans-serif;
+	overflow-x: hidden;
+}
+#barra-navegacao1 {
+	font-size: 22px;
+	padding-top: 20px;
+}
+/* -- Barra de navegação -- */
+.img-logo {
+	height: 40px;
+	align-content: center;
+	width: 200px;
+	display: block;
+	padding-top: 0px;
+	
+	font-size: 60px;
+	background-size: contain;
+}
+nav.navbar-transparente1 {
+	padding: 15px 0px;
+	background: rgba(25, 25, 112, 0.8);
+	border: none;
+	height: 110px;
+}
+
+nav.navbar-transparente {
+	padding: 0px 0px;
+	background: rgba(25, 25, 112, 0.8);
+	border: none;
+}
+
+.navbar-brand{
+	padding: 15px 15px;
+}
+
+.divisor{
+	width: 1px;
+	height: 16px;
+	background: white;
+	margin: 16px 10px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: #9bf0e1;
+}
+
+/* -- Imagem de capa -- */
+.capa {
+	padding-top: 55px;
+	display: table;
+	width: 100%;
+}
+
+.texto-capa {
+	text-align: center;
+	color: white;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* -- Botoes -- */
+.btn-custom {
+	color: white;
+	border-radius: 500px;
+	-webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    padding: 10px 35px;
+    margin: 0px 15px;
+    text-transform: uppercase;
+    transition: background 0.4s, color 0.4s;
+}
+
+.btn-roxo {
+	background: #7c25f8;
+}
+.btn-roxo:hover {
+	background-color: #6207e3;
+	color: white;
+}
+
+.btn-branco {
+	border: 2px solid white;
+}
+.btn-branco:hover {
+	background-color: white;
+	color: black;
+}
+
+/* -- secao servico -- */
+#servicos {
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#centrais{
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#portatil {
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#movel {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.albuns{
+	padding: 10px 0px 10px 0px;
+}
+
+/* -- recursos -- */
+#recursos {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: white;
+}
+
+.rotacionar{
+	transform: rotate(30deg);
+	-ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+    padding-left: 80px;
+}
+
+/* ========================= Tipografia ======================== 
+h1 {
+	font-size: 50px;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+}
+
+h2{
+	font-size: 50px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+h3{
+	font-size: 35px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}*/
+
+footer {
+	background: #000066;
+	padding: 50px 0px 20px 0px;
+	position: relative;
+	color: white;
+}
+footer a:link, footer a:visited, footer a:active {
+	text-decoration: none;
+	}
+footer a:hover {
+	text-decoration: none;  
+	 
+}
+form {
+	background-color: #fff;
+	border: 2px solid gray;
+	border-radius: 9px;
+	padding: 20px 20px;
+}
+
+.fixed {
+    position: fixed;
+}
+
+/* sidebar */
+.bs-docs-sidebar {
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* all links */
+.bs-docs-sidebar .nav>li>a {
+    color: #999;
+    border-left: 2px solid transparent;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* nested links */
+.bs-docs-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+}
+
+/* active & hover links */
+.bs-docs-sidebar .nav>.active>a, 
+.bs-docs-sidebar .nav>li>a:hover, 
+.bs-docs-sidebar .nav>li>a:focus {
+    color: #563d7c;                 
+    text-decoration: none;          
+    background-color: transparent;  
+    border-left-color: #563d7c; 
+}
+/* all active links */
+.bs-docs-sidebar .nav>.active>a, 
+.bs-docs-sidebar .nav>.active:hover>a,
+.bs-docs-sidebar .nav>.active:focus>a {
+    font-weight: 700;
+}
+/* nested active links */
+.bs-docs-sidebar .nav .nav>.active>a, 
+.bs-docs-sidebar .nav .nav>.active:hover>a,
+.bs-docs-sidebar .nav .nav>.active:focus>a {
+    font-weight: 500;
+}
+
+/* hide inactive nested list */
+.bs-docs-sidebar .nav ul.nav {
+    display: none;           
+}
+/* show active nested list */
+.bs-docs-sidebar .nav>.active>ul.nav {
+    display: block;           
+}
+.group {
+    background: yellow;
+    width: 100%;
+    height: 500px;
+}
+.group .subgroup {
+    background: orange;
+    width: 100%;
+    height: 200px;
+}

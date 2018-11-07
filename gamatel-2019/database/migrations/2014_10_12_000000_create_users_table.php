@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('cargo');
             $table->string('area');
             $table->string('email')->unique();
+            $table->rememberToken();
             $table->integer('permissao');
             $table->string('password');
             $table->timestamps();

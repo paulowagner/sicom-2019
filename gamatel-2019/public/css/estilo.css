@@ -1,0 +1,203 @@
+
+@media screen and (max-width: 1217px){
+	.size-dir {
+		font-size: 40px;
+	}
+	.img-logo {
+		height: 40px;
+		width: 200px;
+		display: block;
+		background: url('imagens/logo.png') no-repeat;
+		background-size: contain;
+		color: transparent;
+	}
+	#barra-navegacao {
+		font-size: 16px;
+		padding-top: 15px;
+	}
+}
+@media screen and (min-width: 1218px){
+	.size-dir {
+
+	}
+	.img-logo {
+		height: 80px;
+		width: 400px;
+		display: block;
+		background: url('imagens/logo.png') no-repeat;
+		background-size: contain;
+		color: transparent;
+	}
+	#barra-navegacao {
+		font-size: 22px;
+		padding-top: 20px;
+	}
+}
+html, body {
+	height: 100%;
+}
+
+body {
+	background: /*url('imagens/capa-radio.png') no-repeat,*/
+				linear-gradient(50deg,#9EC7F3,#2418E4);
+	background-attachment: fixed;
+	font-family: Helvetica,Arial,sans-serif;
+	overflow-x: hidden;
+}
+
+/* -- Barra de navegação -- */
+
+
+
+nav.navbar-transparente {
+	padding: 30px 0px;
+	background: rgba(0, 0, 0, 0.6);
+	border: none;
+	height: 110px;
+}
+
+.navbar-brand{
+	padding: 00px 15px;
+}
+
+.divisor{
+	width: 1px;
+	height: 16px;
+	background: white;
+	margin: 16px 10px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: #9bf0e1;
+}
+
+/* -- Imagem de capa -- */
+.capa {
+	color: white;
+	font-size: 20px;
+	padding-top: 55px;
+	display: table;
+	width: 100%;
+}
+
+.texto-capa {
+	text-align: center;
+	color: white;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/* -- Botoes -- */
+.btn-custom {
+	color: white;
+	border-radius: 500px;
+	-webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    padding: 10px 35px;
+    margin: 0px 15px;
+    text-transform: uppercase;
+    transition: background 0.4s, color 0.4s;
+}
+
+.btn-roxo {
+	background: #7c25f8;
+}
+.btn-roxo:hover {
+	background-color: #6207e3;
+	color: white;
+}
+
+.btn-branco {
+	border: 2px solid white;
+}
+.btn-branco:hover {
+	background-color: white;
+	color: black;
+}
+
+/* -- secao servico -- */
+#servicos {
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#centrais{
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+#portateis {
+	padding-top: 100px;
+	padding-bottom: 20px;
+}
+#moveis {
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.albuns{
+	padding: 10px 0px 10px 0px;
+}
+
+/* -- recursos -- */
+#recursos {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: white;
+}
+
+.rotacionar{
+	transform: rotate(30deg);
+	-ms-transform: rotate(30deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Chrome, Safari, Opera */
+    padding-left: 80px;
+}
+
+/* ========================= Tipografia ======================== */
+h1 {
+	font-size: 50px;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+}
+
+h2{
+	font-size: 50px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+h3{
+	font-size: 35px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+#servicos h2, #servicos h3 {
+	color: #2418E4;
+}
+
+#recursos h3 {
+	color: #9bf0e1;
+}
+#contato {
+	color: white;
+	padding: 20px 0px;
+}
+footer {
+	background: #000066;
+	padding: 50px 0px 20px 0px;
+	position: relative;
+	color: white;
+}
+footer a:link, footer a:visited, footer a:active {
+	text-decoration: none;
+	}
+footer a:hover {
+	text-decoration: none;  
+	 
+}
