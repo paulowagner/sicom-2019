@@ -9,7 +9,7 @@
 @endphp
 <div class="row">
 	<div class="col s12">
-		<h4 style="text-align: center">Atualizar Usuario</h4>
+		<h4 style="text-align: center">Atualizar Usuário</h4>
 	</div>
 </div>
 <div class="row">
@@ -37,7 +37,7 @@
       	<div class="row">
 	        <div class="input-field col s4">
 	          	<input id="password" type="password" name="password" class="validate">
-	          	<label for="password">Password</label>
+	          	<label for="password">Senha</label>
 	        </div>
 	        <div class="input-field col s4">
 	          	<input id="email" type="email" name="email" class="validate" value="{{$user->email}}">
@@ -68,7 +68,7 @@
 		  	</div>
       	</div>
       	<input type="hidden" id="selectValues" name="selectValues" value="">
-      	<button class="btn waves-effect waves-light" type="button" name="action" id="submitUserAdd">Atualizar
+      	<button class="btn waves-effect waves-light blue" type="button" name="action" id="submitUserAdd">Atualizar
 		    <i class="material-icons right">send</i>
 	  	</button>
     </form>
