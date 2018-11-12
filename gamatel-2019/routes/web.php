@@ -27,9 +27,13 @@ Route::group(['middleware'=>'auth'],function ()
 	Route::get('/sicom',['as'=>'sicom','uses'=>'SicomController@index']);
 	Route::get('/sicom/dashboard',['as'=>'sicom.dashboard','uses'=>'SicomController@dashboard']);
 	Route::get('/sicom/comercial',['as'=>'sicom.comercial','uses'=>'SicomController@comercial']);
+	Route::get('/sicom/comercial/novoCliente',['as'=>'sicom.comercial.novoCliente','uses'=>'SicomController@novoCliente']);
+	Route::get('/sicom/comercial/novoItem',['as'=>'sicom.comercial.novoItem','uses'=>'SicomController@novoItem']);
 	Route::get('/sicom/servico',['as'=>'sicom.servico','uses'=>'SicomController@servico']);
 	Route::get('/sicom/servico/novaOS',['as'=>'sicom.servico.novaOS','uses'=>'SicomController@novaOS']);
-	
+	Route::post('/sicom/Cliente/salvar',['as'=>'sicom.Cliente.salvar','uses'=>'ClienteController@clienteAddcontroller']);
+	Route::post('/sicom/Item/salvar',['as'=>'sicom.Item.salvar','uses'=>'EstoqueController@itemAddcontroller']);
+
 	Route::get('/sicom/gerenciamento/addUser','userController@viewAddcontroller');
 	Route::get('/sicom/gerenciamento/updateUser','userController@viewUpdateController');
 	Route::post('/sicom/user/salvar',['as'=>'sicom.user.salvar','uses'=>'userController@userAddcontroller']);

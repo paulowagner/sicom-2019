@@ -22,26 +22,35 @@
     $(document).ready(function(){
       	$('.tabs').tabs();
     	$('.AbasAdmin').click(function () {
-    		if(this.id == 2 && $('#Item').html()==""){
+            if (this.id == 1) {
+                $.ajax({
+                    url: '{{asset('/sicom/comercial/novoCliente')}}',
+                    method: 'get',
+                    success: function(data){
+                        $('#novoCliente').html(data);
+                    }
+                });
+            }
+    		if(this.id == 2 ){
     			$.ajax({
 			        url: 'administrativo/item.php',
-			        method: 'post',
+			        method: 'get',
 			        success: function(data){
 			            $('#Item').html(data);
 			        }
 			    });
-    		}else if(this.id == 3 && $('#Contrato').html()==""){
+    		}else if(this.id == 3 /*&& $('#Contrato').html()==""*/){
     			$.ajax({
-			        url: 'administrativo/contrato.php',
-			        method: 'post',
+			        url: '{{asset('/sicom/comercial/novoItem')}}',
+			        method: 'get',
 			        success: function(data){
-			            $('#Contrato').html(data);
+			            $('#novoItem').html(data);
 			        }
 			    });
     		}else if(this.id == 4 && $('#Asset').html()==""){
     			$.ajax({
 			        url: 'geral/asset.php',
-			        method: 'post',
+			        method: 'get',
 			        success: function(data){
 			            $('#Asset').html(data);
 			        }
@@ -49,19 +58,13 @@
     		}else if(this.id == 5){
     			$.ajax({
 			        url: 'geral/sa.php',
-			        method: 'post',
+			        method: 'get',
 			        success: function(data){
 			            $('#SA').html(data);
 			        }
 			    });
     		}
     	});
-	  	$.ajax({
-	        url: 'administrativo/clientes.php',
-	        method: 'post',
-	        success: function(data){
-	            $('#Clientes').html(data);
-	        }
-	    });
+	  	
     });
 </script>

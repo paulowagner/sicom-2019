@@ -126,16 +126,16 @@ function Formata(campo,tammax,teclapres,decimal) {
   vr = Limpar(campo.value,"0123456789");
   vr = significativo(vr);
   tam = vr.length;
-  if ( tam == 2 ){
-    resul = "0,"+vr ;
-  }else if(tam == 1){
-    resul = "0,0"+vr ;
-  }else if(tam == 0){
-    resul = "0,00";
+  if ( tam <= decimal ){
+    resul = "0,";
+    for (var i = 0; i < decimal-tam; i++) {
+      resul=resul+"0"; 
+    }
+    resul=resul+vr;
   }
   else{
-    resul = "," + vr.substr( tam - 2, 2 ) ;
-    tam-=2;
+    resul = "," + vr.substr( tam - decimal, decimal ) ;
+    tam-=decimal;
     while(tam>3){
 
       resul = "."+ vr.substr( tam - 3, 3)+ resul;
