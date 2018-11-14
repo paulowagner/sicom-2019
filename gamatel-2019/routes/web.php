@@ -29,6 +29,7 @@ Route::group(['middleware'=>'auth'],function ()
 	Route::get('/sicom/comercial',['as'=>'sicom.comercial','uses'=>'SicomController@comercial']);
 	Route::get('/sicom/comercial/novoCliente',['as'=>'sicom.comercial.novoCliente','uses'=>'SicomController@novoCliente']);
 	Route::get('/sicom/comercial/novoItem',['as'=>'sicom.comercial.novoItem','uses'=>'SicomController@novoItem']);
+	Route::get('/sicom/comercial/asset',['as'=>'sicom.comercial.asset','uses'=>'SicomController@novoAsset']);
 	Route::get('/sicom/servico',['as'=>'sicom.servico','uses'=>'SicomController@servico']);
 	Route::get('/sicom/servico/novaOS',['as'=>'sicom.servico.novaOS','uses'=>'SicomController@novaOS']);
 	Route::post('/sicom/Cliente/salvar',['as'=>'sicom.Cliente.salvar','uses'=>'ClienteController@clienteAddcontroller']);

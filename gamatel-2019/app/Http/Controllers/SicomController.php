@@ -27,6 +27,10 @@ class SicomController extends Controller
     {
         return view('sicom.comercial.novoItem');
     }
+    public function novoAsset()
+    {
+        return view('sicom.comercial.novoAsset');
+    }
     public function novaOS()
     {
     	$clientes = Cliente::all();

@@ -56,11 +56,19 @@
 			        }
 			    });
     		}else if(this.id == 5){
+                $.ajax({
+                    url: '{{asset('/sicom/comercial/novoItem')}}',
+                    method: 'get',
+                    success: function(data){
+                        $('#Contrato').html(data);
+                    }
+                });
+            }else if(this.id == 6){
     			$.ajax({
-			        url: 'geral/sa.php',
+			        url: '{{asset('/sicom/comercial/asset')}}',
 			        method: 'get',
 			        success: function(data){
-			            $('#SA').html(data);
+			            $('#Asset').html(data);
 			        }
 			    });
     		}

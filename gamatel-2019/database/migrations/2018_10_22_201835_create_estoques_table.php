@@ -16,9 +16,9 @@ class CreateEstoquesTable extends Migration
         Schema::create('estoques', function (Blueprint $table) {
             $table->increments('id');
             $table->string('descricao');
-            $table->string('codigoNCM');
-            $table->string('codigoFornecedor');
-            $table->string('codigoSAP');
+            $table->string('codigoNCM')->nullable();
+            $table->string('codigoFornecedor')->nullable();
+            $table->string('codigoSAP')->nullable();
             $table->integer('ativo');
             $table->float('valor', 8, 2);
             $table->float('vitoria_estoqueInterno',8,3);
