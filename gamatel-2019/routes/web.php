@@ -28,11 +28,13 @@ Route::group(['middleware'=>'auth'],function ()
 	Route::get('/sicom/dashboard',['as'=>'sicom.dashboard','uses'=>'SicomController@dashboard']);
 	Route::get('/sicom/comercial',['as'=>'sicom.comercial','uses'=>'SicomController@comercial']);
 	Route::get('/sicom/comercial/novoCliente',['as'=>'sicom.comercial.novoCliente','uses'=>'SicomController@novoCliente']);
+	Route::get('/sicom/comercial/Cliente',['as'=>'sicom.comercial.Cliente','uses'=>'SicomController@Cliente']);
 	Route::get('/sicom/comercial/novoItem',['as'=>'sicom.comercial.novoItem','uses'=>'SicomController@novoItem']);
 	Route::get('/sicom/comercial/asset',['as'=>'sicom.comercial.asset','uses'=>'SicomController@novoAsset']);
 	Route::get('/sicom/servico',['as'=>'sicom.servico','uses'=>'SicomController@servico']);
 	Route::get('/sicom/servico/novaOS',['as'=>'sicom.servico.novaOS','uses'=>'SicomController@novaOS']);
 	Route::post('/sicom/Cliente/salvar',['as'=>'sicom.Cliente.salvar','uses'=>'ClienteController@clienteAddcontroller']);
+	Route::post('/sicom/Cliente/get',['as'=>'sicom.Cliente.get','uses'=>'ClienteController@clienteController']);
 	Route::post('/sicom/Item/salvar',['as'=>'sicom.Item.salvar','uses'=>'EstoqueController@itemAddcontroller']);
 
 	Route::get('/sicom/gerenciamento/addUser','userController@viewAddcontroller');

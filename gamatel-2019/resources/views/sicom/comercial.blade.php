@@ -33,10 +33,10 @@
             }
     		if(this.id == 2 ){
     			$.ajax({
-			        url: 'administrativo/item.php',
+			        url: '{{asset('/sicom/comercial/Cliente')}}',
 			        method: 'get',
 			        success: function(data){
-			            $('#Item').html(data);
+			            $('#Clientes').html(data);
 			        }
 			    });
     		}else if(this.id == 3 /*&& $('#Contrato').html()==""*/){

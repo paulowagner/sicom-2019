@@ -23,6 +23,10 @@ class SicomController extends Controller
     {
         return view('sicom.comercial.novoCliente');
     }
+    public function Cliente()
+    {
+        return view('sicom.comercial.Cliente');
+    }
     public function novoItem()
     {
         return view('sicom.comercial.novoItem');
