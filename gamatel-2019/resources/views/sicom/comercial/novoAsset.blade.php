@@ -8,13 +8,13 @@
 				<div class="col s6">
 					<h6 style="text-align: center">Escolher Modelo</h6>
 					<div class="input-field col s12">
-					    <select>
+					    <select id="tipoSelect">
 					      	<option value="" disabled selected>Escolha o tipo</option>
 					    </select>
 					    <label>Tipo</label>
 				  	</div>
 				  	<div class="input-field col s12">
-					    <select>
+					    <select id="id_modelo" name="id_modelo">
 					      	<option value="" disabled selected>Escolha o modelo</option>
 					    </select>
 					    <label>Modelo</label>
@@ -31,8 +31,8 @@
 			          	<label for="modelo">Modelo</label>
 			        </div>
 			        <div class="input-field col s6">
-			          	<input id="nserie" type="text" name="nserie" class="validate">
-			          	<label for="nserie">Padrão numero de série</label>
+			          	<input id="nseriePadrao" type="text" name="nseriePadrao" class="validate">
+			          	<label for="nseriePadrao">Padrão numero de série</label>
 			        </div>
 			        <div class="col s6" style="align-items:baseline">
 			        	<button class="btn waves-effect waves-light blue" type="button" name="action" id="submitClienteAdd">Cadastrar modelo
@@ -44,37 +44,14 @@
       		</div>
       		<div class="row">
 		        <div class="input-field col s3">
-		          	<input id="Cidade" type="text" name="Cidade" class="validate">
-		          	<label for="Cidade">Cidade</label>
+		          	<input id="nserieId" type="text" name="nserieId" class="validate">
+		          	<label for="nserieId">Nº serie/Id</label>
 		        </div>
 		        <div class="input-field col s3">
-		          	<input id="Estado" type="text" name="Estado" class="validate">
-		          	<label for="Estado">Estado</label>
-		        </div>
-		        <div class="input-field col s2">
-		          	<input id="CNPJ" type="text" name="CNPJ" onkeyup="FormataCNPJ(this)" class="validate">
-		          	<label for="CNPJ">CNPJ</label>
-		        </div>
-		        <div class="input-field col s2">
-		          	<input id="InsEst" type="text" name="InsEst" class="validate">
-		          	<label for="InsEst">InsEst</label>
+		          	<input id="compradoEm" type="date" name="compradoEm" class="validate">
+		          	<label for="compradoEm">Comprado em</label>
 		        </div>
       		</div>
-      		<h5>Contato no Cliente</h5>
-			<div class="row">
-				<div class="input-field col s3">
-				  	<input id="Nome" type="text" name="Nome" class="validate">
-				  	<label for="Nome">Nome</label>
-				</div>
-				<div class="input-field col s3">
-				  	<input id="Telefone" type="text" onkeyup="FormataTEL(this)" name="Telefone" class="validate">
-				  	<label for="Telefone">Telefone</label>
-				</div>
-				<div class="input-field col s3">
-					<input id="email" type="email" name='Email' class="validate">
-					<label for="email">Email</label>
-				</div>
-			</div>
 			<button class="btn waves-effect waves-light blue" type="button" name="action" id="submitClienteAdd">Cadastrar
 		    	<i class="material-icons right">send</i>
 	  		</button>
