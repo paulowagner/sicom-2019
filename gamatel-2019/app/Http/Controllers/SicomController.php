@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Cliente;
+use App\Estoque;
 class SicomController extends Controller
 {
     public function index()
@@ -34,6 +35,12 @@ class SicomController extends Controller
     public function novoAsset()
     {
         return view('sicom.comercial.novoAsset');
+    }
+    public function novaSA()
+    {
+        $clientes = Cliente::all();
+        $itens = Estoque::all();
+        return view('sicom.comercial.novaSA',compact('clientes','itens'));
     }
     public function novaOS()
     {

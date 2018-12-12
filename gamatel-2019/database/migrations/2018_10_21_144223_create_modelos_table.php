@@ -17,6 +17,7 @@ class CreateModelosTable extends Migration
             $table->increments('id');
             $table->string('nseriePadrao');
             $table->string('modelo');
+            $table->integer('tamanho');
             $table->string('tipo');
             $table->timestamps();
         });

@@ -42,10 +42,9 @@
 				</div>
       		</div>
       		<div class="row">
-		        <div class="input-field col s3">
-		          	<input id="nserieId" type="text" name="nserieId" class="validate">
-		          	<label for="nserieId">Nº serie/Id</label>
-		        </div>
+      			<div class="col s9">
+				    <div class="chips chips-initial" id="chips"></div>
+			    </div>
 		        <div class="input-field col s3">
 		          	<input id="compradoEm" type="date" name="compradoEm" class="validate">
 		          	<label for="compradoEm">Comprado em</label>
@@ -62,14 +61,26 @@
 </div>
 <script type="text/javascript">
  	$(document).ready(function(){
+ 		var chips = document.querySelectorAll('.chips');
+	    var instance_chip = M.Chips.init(chips, {
+	            placeholder: 'Digite o Nº de Serie',
+	            name: 'Nº Serie',
+	        });
  		var elems = document.querySelectorAll('select');
     	var instances = M.FormSelect.init(elems, {});
  		M.updateTextFields();
  		$('#submitAssetAdd').click(function () {
+ 			var array = [];
+ 			for (var i = instance_chip[0].chipsData.length - 1; i >= 0; i--) {
+	            array.push(instance_chip[0].chipsData[i].tag.replace(",", "§"));
+	        }
  			$.ajax({
 	            url: '{{asset('/sicom/Asset/salvar')}}',
 	            method: 'post',
-	            data: $('#assetAddForm').serialize(),
+	            data:$('#assetAddForm').serialize(),
+	            beforeSend: function(xhr, settings){
+	                settings.data += '&'+'list='+array+"";
+	            },
 	            success: function(data){
 					$('#mensagem_sucesso_asset_add').html(data);
 	            }

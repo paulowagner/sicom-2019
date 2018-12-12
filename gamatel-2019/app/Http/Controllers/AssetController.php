@@ -45,14 +45,17 @@ class AssetController extends Controller
     public function assetAdd(Request $req)
     {
     	$dados = $req->all();
-    	$find = Asset::where('nserieId',$dados['nserieId'])->get();
-        if (count($find)==0) {
-            $dados['status'] = 'Livre';
-    		Asset::create($dados);
-            return "Asset criado!!";
-        }else{
-            return "Asset já cadastrado!!";
-        }
-    	
+    	$series = explode(",", $dados['list']);
+    	foreach ($series as $serie) {
+    		$dados['nserieId'] = $serie;
+    		$find = Asset::where('nserieId',$dados['nserieId'])->get();
+	        if (count($find)==0) {
+	            $dados['status'] = 'Livre';
+	    		Asset::create($dados);
+	            echo "Asset ".$dados['nserieId']." criado!!<br>";
+	        }else{
+	            echo "Asset ".$dados['nserieId']." já cadastrado!!<br>";
+	        }
+    	}
     }
 }

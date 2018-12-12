@@ -30,10 +30,10 @@
 			<form id="teste">
 				<div class="row">
 				    <div class="col s10">
-				      	<div class="chips chips-autocomplete"></div>
+				      	<div class="chips chips-initial"></div>
 				    </div>
 				    <div class="col s2">
-				      	<a id="gogogadget" class="btn waves-effect waves-light">Itens</a>
+				      	<a id="gogogadget" class="btn waves-effect waves-light">Cadastrar</a>
 				    </div>
 			  	</div>
 			</form>

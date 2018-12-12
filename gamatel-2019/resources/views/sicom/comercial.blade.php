@@ -64,8 +64,17 @@
                     }
                 });
             }else if(this.id == 6){
+                $.ajax({
+                    url: '{{asset('/sicom/comercial/asset')}}',
+                    method: 'get',
+                    success: function(data){
+                        $('#Asset').html(data);
+                    }
+                });
+            }else if(this.id == 7){
+                alert('sdfdsfdsf');
     			$.ajax({
-			        url: '{{asset('/sicom/comercial/asset')}}',
+			        url: '{{asset('/sicom/comercial/novaSA')}}',
 			        method: 'get',
 			        success: function(data){
 			            $('#Asset').html(data);
