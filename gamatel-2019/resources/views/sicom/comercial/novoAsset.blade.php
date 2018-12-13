@@ -50,9 +50,24 @@
 		          	<label for="compradoEm">Comprado em</label>
 		        </div>
       		</div>
-			<button class="btn waves-effect waves-light blue" type="button" name="action" id="submitAssetAdd">Cadastrar
-		    	<i class="material-icons right">send</i>
-	  		</button>
+      		<div class="row">
+      			<div class="input-field col s4">
+				    <select id="local" name="local">
+				      	<option value="1" disabled selected>Vitoria</option>
+				      	<option value="2" disabled selected>Ubu</option>
+				      	<option value="3" disabled selected>Germano</option>
+				      	<option value="4" disabled selected>Aracruz</option>
+				      	<option value="5" disabled selected>Posto da Mata</option>
+				    </select>
+				    <label>Localidade</label>
+			  	</div>
+			  	<div class="input-field col s4">
+		  			<button class="btn waves-effect waves-light blue" type="button" name="action" id="submitAssetAdd">Cadastrar
+		    			<i class="material-icons right">send</i>
+	  				</button>
+			  	</div>
+      		</div>
+			
 		</form>
 	</div>
 	<div id="mensagem_sucesso_asset_add">
