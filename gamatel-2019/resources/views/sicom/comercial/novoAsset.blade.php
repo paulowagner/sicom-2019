@@ -30,14 +30,18 @@
 			          	<input id="modelo" type="text" name="modelo" class="validate">
 			          	<label for="modelo">Modelo</label>
 			        </div>
-			        <div class="input-field col s6">
+			        <div class="input-field col s4">
 			          	<input id="nseriePadrao" type="text" name="nseriePadrao" class="validate">
 			          	<label for="nseriePadrao">Padrão numero de série</label>
 			        </div>
-			        <div class="col s6" style="align-items:baseline">
+			        <div class="input-field col s4">
+			          	<input id="tamanho" type="text" name="tamanho" class="validate">
+			          	<label for="tamanho">Tamanho numero de série</label>
+			        </div>
+			        <div class="input-field col s4" style="align-items:baseline">
 			        	<button class="btn waves-effect waves-light blue" type="button" name="action" id="submitModeloAssetAdd">Cadastrar modelo
-				    	<i class="material-icons right">send</i>
-			  		</button>
+				    		<i class="material-icons right">send</i>
+			  			</button>
 			        </div>
 				</div>
       		</div>
@@ -53,11 +57,12 @@
       		<div class="row">
       			<div class="input-field col s4">
 				    <select id="local" name="local">
-				      	<option value="1" disabled selected>Vitoria</option>
-				      	<option value="2" disabled selected>Ubu</option>
-				      	<option value="3" disabled selected>Germano</option>
-				      	<option value="4" disabled selected>Aracruz</option>
-				      	<option value="5" disabled selected>Posto da Mata</option>
+				      	<option value="1" disabled selected>Escolha o local</option>
+				      	<option value="1">Vitoria</option>
+				      	<option value="2">Ubu</option>
+				      	<option value="3">Germano</option>
+				      	<option value="4">Aracruz</option>
+				      	<option value="5">Posto da Mata</option>
 				    </select>
 				    <label>Localidade</label>
 			  	</div>

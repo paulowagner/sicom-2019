@@ -72,12 +72,11 @@
                     }
                 });
             }else if(this.id == 7){
-                alert('sdfdsfdsf');
     			$.ajax({
 			        url: '{{asset('/sicom/comercial/novaSA')}}',
 			        method: 'get',
 			        success: function(data){
-			            $('#Asset').html(data);
+			            $('#SA').html(data);
 			        }
 			    });
     		}

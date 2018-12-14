@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Cliente;
 use App\Estoque;
+use App\User;
 class SicomController extends Controller
 {
     public function index()
@@ -38,9 +39,9 @@ class SicomController extends Controller
     }
     public function novaSA()
     {
-        $clientes = Cliente::all();
+        $users = User::all();
         $itens = Estoque::all();
-        return view('sicom.comercial.novaSA',compact('clientes','itens'));
+        return view('sicom.comercial.novaSA',compact('users','itens'));
     }
     public function novaOS()
     {

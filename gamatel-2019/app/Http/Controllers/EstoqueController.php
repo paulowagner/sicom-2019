@@ -11,6 +11,7 @@ class EstoqueController extends Controller
     public function itemAddcontroller(Request $req)
     {
     	$dados = $req->all();
+        $dados['ativo'] = 1; 
     	$find = Estoque::where('descricao',$dados['descricao'])->get();
     	if (count($find)==0&&$dados['descricao']!="") {
     		$dados['valor'] = str_replace(".", "", $dados['valor']);
