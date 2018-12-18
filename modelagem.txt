@@ -1,4 +1,6 @@
 
+INSERT INTO `users`( `name`, `login`, `cargo`, `area`, `email`, `permissao`, `password`) VALUES ("Paulo Wagner Cardoso Gama Vasconcelos",'paulow',"Estagiario",'Técnica','paulowvasconcelos@gmail.com','21848','$2y$10$KNOqitEmfPMcRORzV3a5KuG2u.I0zgtP93526DCoN1aK3mCBYf9yO')
+
 1
 Criar grupos técnicos e administrativos
 

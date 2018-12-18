@@ -30,8 +30,8 @@
                         <ul>
                     <?  foreach (Yii::app()->controller->menu['items'] as $menu){
                             if (!isset($menu['visible']) || $menu['visible']){ ?>
-                                <li class="<?php echo ($menu['active'] ? 'ativo' : '')?>">
-                                    <a href="<?php echo (is_array($menu['url']) ? Yii::app()->createUrl($menu['url'][0]) : $menu['url'])?>">
+                                <li class="<?php echo ($menu['active'] ? 'ativo' : '');?>">
+                                    <a href="<?php echo (is_array($menu['url']) ? Yii::app()->createUrl($menu['url'][0]) : $menu['url']);?>">
                                         <?php echo $menu['label'];?>
                                     </a>
                                 </li>
@@ -58,6 +58,6 @@
             <span class="botoes"></span>
         </div>
     
-        <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/js/jquery/jquery.maskedinput-1.2.2.js"></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/js/jquery/jquery.maskedinput-1.2.2.js"></script>
     </body>
 </html>
