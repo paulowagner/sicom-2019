@@ -8542,7 +8542,7 @@
 											"font": "Arial;13;1",
 											"left": 125,
 											"top": 911,
-											"width": 367,
+											"width": 335,
 											"height": 13,
 											"text": "Auditoria"
 										},
@@ -8577,7 +8577,7 @@
 									"font": "Arial;13;0",
 									"left": 120,
 									"top": 904,
-									"width": 377,
+									"width": 345,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFmhx9D0CetEC4="
@@ -8614,7 +8614,7 @@
 											"font": "Arial;13;0",
 											"left": 125,
 											"top": 934,
-											"width": 367,
+											"width": 335,
 											"height": 13,
 											"text": "+usuario",
 											"horizontalAlignment": 0
@@ -8631,7 +8631,7 @@
 											"font": "Arial;13;0",
 											"left": 125,
 											"top": 949,
-											"width": 367,
+											"width": 335,
 											"height": 13,
 											"text": "+Attribute2",
 											"horizontalAlignment": 0
@@ -8648,7 +8648,7 @@
 											"font": "Arial;13;0",
 											"left": 125,
 											"top": 964,
-											"width": 367,
+											"width": 335,
 											"height": 13,
 											"text": "+Attribute3",
 											"horizontalAlignment": 0
@@ -8657,7 +8657,7 @@
 									"font": "Arial;13;0",
 									"left": 120,
 									"top": 929,
-									"width": 377,
+									"width": 345,
 									"height": 53
 								},
 								{
@@ -8672,7 +8672,7 @@
 									"font": "Arial;13;0",
 									"left": 120,
 									"top": 982,
-									"width": 377,
+									"width": 345,
 									"height": 10
 								},
 								{
@@ -8712,8 +8712,8 @@
 							"containerChangeable": true,
 							"left": 120,
 							"top": 904,
-							"width": 377,
-							"height": 273,
+							"width": 345,
+							"height": 177,
 							"nameCompartment": {
 								"$ref": "AAAAAAFmhx9D0CesGd4="
 							},

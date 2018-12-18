@@ -13,16 +13,17 @@ Criar botões de atalhos para ações corriqueiras (para agilizar)
 
 4
 Criar sistema de SA
-
 	Visão geral de fluxo de autorização e execução:
+
 	Preenchimento
 	Validação Técnica
-	Aprovador
+	Aprovador ()
 	Validação Compras
 	Comprar
 	Validação do solicitante
 
 	Fluxo do material (com datas):
+	Aguardando aprovação
 	Aguardando compra
 	Compra em andamento
 	Em transito do fornecedor

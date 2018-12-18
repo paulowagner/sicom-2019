@@ -2,44 +2,44 @@
 
 
 <form id="newSAForm" class="col s12">
-    <div class="row ui ordered steps tablet stackable">
-        <div class="completed step">
+    <div class="seven colunm row ui ordered tiny steps tablet stackable">
+        <div class="colunm completed step">
             <div class="content">
                 <div class="title">Preenchimento</div>
-                <div class="description">12/12/2018 16:56</div>
+                <div class="description">12/12/2018 16:56<br>Alan</div>
             </div>
         </div>
-        <div class="completed step">
+        <div class="colunm completed step">
             <div class="content">
-                <div class="title">Validação</div>
+                <div class="title">Validação Técnica</div>
                 <div class="description">12/12/2018 17:23</div>
             </div>
         </div>
-        <div class="active step">
+        <div class="colunm active step">
             <div class="content">
                 <div class="title">Aprovador</div>
                 <div class="description">Aguardando</div>
             </div>
         </div>
-        <div class="step">
+        <div class="colunm step">
             <div class="content">
-                <div class="title">Compras</div>
+                <div class="title">Validação Compras</div>
                 <div class="description">Validação</div>
             </div>
         </div>
-        <div class="step">
+        <div class="colunm step">
             <div class="content">
                 <div class="title">Comprar</div>
                 <div class="description">Aguardando</div>
             </div>
         </div>
-        <div class="step">
+        <div class="colunm step">
             <div class="content">
-                <div class="title">Solicitante</div>
+                <div class="title">Validação do solicitante</div>
                 <div class="description">Validação</div>
             </div>
         </div>
-        <div class="step">
+        <div class="colunm step">
             <div class="content">
                 <div class="title">Finalizada</div>
                 <div class="description">SA em andamento</div>
