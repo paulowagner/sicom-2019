@@ -15,7 +15,8 @@ class SicomController extends Controller
     }
     public function dashboard()
     {
-    	return view('sicom.dashboard');
+        $itens = Estoque::where('aprovado',0)->get();
+    	return view('sicom.dashboard',compact('itens'));
     }
     public function servico()
     {

@@ -32,6 +32,8 @@ class CreateOSTable extends Migration
             $table->unsignedInteger('id_contato');
             $table->foreign('id_contato')->references('id')->on('contatos');
 
+            $table->unsignedInteger('id_user')->nullable();
+            $table->foreign('id_user')->references('id')->on('users');
 
             $table->timestamps();
         });

@@ -19,6 +19,8 @@ class CreateContratosTable extends Migration
             $table->time('fim');
             $table->string('anotacoes');
             $table->string('nContrato');
+            $table->unsignedInteger('id_user')->nullable();
+            $table->foreign('id_user')->references('id')->on('users');
             $table->integer('idCliente')->unsigned();
             $table->foreign('idCliente')->references('id')->on('clientes');
             $table->timestamps();

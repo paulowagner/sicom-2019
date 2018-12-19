@@ -1,21 +1,21 @@
-<h4 style="text-align: center">Nova SA</h4>
+<h3 style="text-align: center">Nova SA</h3>
 
 
 <form id="newSAForm" class="col s12">
     <div class="seven colunm row ui ordered tiny steps tablet stackable">
-        <div class="colunm completed step">
+        <div class="colunm active step">
             <div class="content">
                 <div class="title">Preenchimento</div>
-                <div class="description">12/12/2018 16:56<br>Alan</div>
+                <div class="description">{{date('d-m-Y H:i:s')}}<br>{{Auth::user()->name}}</div>
             </div>
         </div>
-        <div class="colunm completed step">
+        <div class="colunm step">
             <div class="content">
                 <div class="title">Validação Técnica</div>
-                <div class="description">12/12/2018 17:23</div>
+                <div class="description"></div>
             </div>
         </div>
-        <div class="colunm active step">
+        <div class="colunm step">
             <div class="content">
                 <div class="title">Aprovador</div>
                 <div class="description">Aguardando</div>

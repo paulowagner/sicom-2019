@@ -83,7 +83,7 @@
         });
         $.ajax({
             url: '{{url('/sicom/dashboard')}}',
-            method: 'post',
+            method: 'get',
             success: function(data){
 
                 $('#test1').html(data);

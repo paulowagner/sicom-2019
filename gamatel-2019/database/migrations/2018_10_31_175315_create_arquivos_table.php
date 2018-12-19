@@ -20,6 +20,8 @@ class CreateArquivosTable extends Migration
             $table->unsignedInteger('size');
             $table->unsignedInteger('id_os');
             $table->foreign('id_os')->references('id')->on('os');
+            $table->unsignedInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->timestamps();
         });
     }

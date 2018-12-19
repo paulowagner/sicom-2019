@@ -20,6 +20,8 @@ class CreateEntregasTable extends Migration
             $table->foreign('id_contato')->references('id')->on('contatos');
             $table->unsignedInteger('id_asset_contrato');
             $table->foreign('id_asset_contrato')->references('id')->on('asset_contratos');
+            $table->unsignedInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users');
             $table->timestamps();
         });
     }

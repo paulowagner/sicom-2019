@@ -15,12 +15,13 @@ class CreateFluxosTable extends Migration
     {
         Schema::create('fluxos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tipo');
-            $table->string('fluxo');
-            $table->unsignedInteger('id_fluxo');
-            $table->unsignedInteger('finalizado');
-            $table->unsignedInteger('ativo');
-            $table->timestamps('data');
+            $table->string('tipo');//SA OS Item-SA 
+            $table->unsignedInteger('id_fluxo');//id_sa id_os id_itemSa
+            $table->string('fluxo');//Descrição do fluxo
+            $table->unsignedInteger('id_user')->nullable();
+            $table->foreign('id_user')->references('id')->on('users');
+            $table->unsignedInteger('finalizado')->nullable();
+            $table->unsignedInteger('ativo')->nullable();
             $table->timestamps();
         });
     }

@@ -24,7 +24,7 @@ class CreateClientesTable extends Migration
             $table->string('Cidade');
             $table->string('Estado');
             $table->string('CNPJ');
-            $table->string('InsEst');
+            $table->string('InsEst')->nullable();
             $table->timestamps();
         });
     }

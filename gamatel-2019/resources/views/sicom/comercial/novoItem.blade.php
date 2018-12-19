@@ -8,6 +8,10 @@
 		          	<input id="descricao" name="descricao" type="text" class="validate">
 		          	<label for="descricao">Item</label>
 		        </div>
+		        <div class="input-field col s1">
+		          	<input id="Uni" name="uni" type="text" class="validate">
+		          	<label for="Uni">Uni</label>
+		        </div>
 		        <div class="input-field col s2">
 		          	<input id="codigoNCM" type="text" name="codigoNCM" class="validate">
 		          	<label for="codigoNCM">Código NCM</label>
@@ -21,7 +25,7 @@
 		          	<label for="codigoFornecedor">Código Fornecedor</label>
 		        </div>
 		        
-		        <div class="input-field col s2">
+		        <div class="input-field col s1">
 		          	<input id="valor" type="text" name="valor" value="0" onkeyup="Formata(this,20,event,2)" class="validate">
 		          	<label for="valor">Valor</label>
 		        </div>
@@ -144,6 +148,7 @@
 	 					$('#codigoFornecedor').val("");
 	 					$('#codigoSAP').val("");
  						$('#codigoNCM').val("");	
+ 						$('#Uni').val("");	
  						$('#valor').val("0");	
  						$('#vitoria_ideal').val("0");	
  						$('#vitoria_minimo').val("0");	
