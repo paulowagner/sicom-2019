@@ -13,27 +13,41 @@ Separar ações de "status"
 Criar botões de atalhos para ações corriqueiras (para agilizar)
 
 
-4
-Criar sistema de SA
+4 Criar sistema de SA
 	Visão geral de fluxo de autorização e execução:
-
-	Preenchimento
-	Validação Técnica
-	Aprovador ()
-	Validação Compras
-	Comprar
-	Validação do solicitante
-
+	Estados:
+		1 - Preenchimento
+		2 - Validação Técnica
+		3 - Aprovador
+		4 - Validação Compras
+		5 - Comprar
+		6 - Validação do solicitante
+		7 - finalizada
+	Transições SA:
+		Estado inicial: 1 no momento de abertura
+		1 para 2: Após o preenchimento
+		2 para 3: Após o validação de um ou mais itens
+		3 para 4: Após a aprovação de um ou mais itens
+		4 para 5: Após a aprovação de compra de um ou mais itens
+		5 para 6: Após a entrega dos itens
+		6 para 7: Após a validação do solicitante
 	Fluxo do material (com datas):
-	Aguardando aprovação
-	Aguardando compra
-	Compra em andamento
-	Em transito do fornecedor
-	Em transito para solicitante
-	Recebido pelo solicitante
+		7 - Aguardando validação Técnica
+		1 - Aguardando aprovação
+		2 - Aguardando compra
+		3 - Compra em andamento
+		4 - Em transito do fornecedor (Previsão de prazo de entregue)
+		5 - Em transito para solicitante
+		6 - Recebido pelo solicitante
+	Transições Materiais SA:
+		Estado inicial: 1 após abertura de SA
+		1 para 2: Após aprovação
+		2 para 3: Após aprovação de compra
+		3 para 4: Após pedido de compra no fornecedor
+		4 para 5: Após item ser enviado para o solicitante
+		5 para 6: Após o solicitante validar item
 	
-	
-	Opção de abrir não conformidade (para o comprado ou o solicitante)
+	Opção de abrir não conformidade (para o comprador ou o solicitante)
 
 
 	Reposição de estoque: Criar opção de abrir SA dos últimos itens vendidos no site em determinado período (botão atalho)
@@ -42,13 +56,12 @@ Criar sistema de SA
 	
 	Item, descrição, quant, unid, prazo, inspeção
 
-	Para cada item, opção de Requisito e Aplicação
-
+	
 	Envia para aprovador
 
 	Campo de observações
 
-	Campo Produto não conforme
+	Campo Produto não conforme (Produto em não conformidade com o pedido)
 
 	Campo responsável pelo fechamento da SA
 
@@ -73,4 +86,24 @@ Registro de atividades
 
 9
 
-
+'Aguardando reserva SAP'
+'Aguardando aprovação do cliente'
+'Aguardando material de SA'
+'Aguardando entrega ao cliente'
+'Aguardando envio de proposta'
+'OS aprovada, aguardando reparo em campo'
+'OS aprovada, aguardando reparo em laboratório'
+'Em analise no laboratório'
+'Enviado para suporte externo'
+'Designado'
+'Em Andamento'
+'Pendente'
+'Locado'
+'Resolvido'
+'Faturado Parcial'
+'Faturado Total'
+'Devolvido'
+'Devolvido Parcial'
+'Devolvido com avaria'
+'Proposta Não Aprovada'
+'Fechado'
