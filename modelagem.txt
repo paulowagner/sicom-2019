@@ -85,25 +85,105 @@ Registro de não conformidade para cada área (SA, OS, proposta, etc)
 Registro de atividades
 
 9
+Migrar para propostas:
+	'Locado'
+	'Devolvido'
+	'Devolvido Parcial'
+	'Devolvido com avaria'
 
-'Aguardando reserva SAP'
-'Aguardando aprovação do cliente'
-'Aguardando material de SA'
-'Aguardando entrega ao cliente'
-'Aguardando envio de proposta'
-'OS aprovada, aguardando reparo em campo'
-'OS aprovada, aguardando reparo em laboratório'
-'Em analise no laboratório'
-'Enviado para suporte externo'
-'Designado'
-'Em Andamento'
-'Pendente'
-'Locado'
-'Resolvido'
-'Faturado Parcial'
-'Faturado Total'
-'Devolvido'
-'Devolvido Parcial'
-'Devolvido com avaria'
-'Proposta Não Aprovada'
-'Fechado'
+Estados OS:
+	1 - Abertura
+	2 - Analise 'Em analise no laboratório'
+	3 - Proposta
+	4 - Manutenção
+	5 - Faturamento
+	6 - Fechamento
+Transições OS:
+	Estado inicial: 1 - Abertura da OS
+	1 para 2: Imediatamente após a abertura caso seja necessaria analise
+	1 para 4: Imediatamente após a abertura caso serviço seja contratual
+	2 para 3: Após analise concluida a proposta é solicitada
+	3 para 4: Caso proposta seja aceita
+	3 para 6: Caso proposta seja rejeitada
+	4 para 5: Caso exista cobranças inerentes ao serviço
+	4 para 6: Caso não exista cobranças inerentes ao serviço
+
+OS:
+	'Proposta Não Aprovada'
+	'Aguardando aprovação do cliente'
+	'OS aprovada'
+	
+	
+	
+	
+
+	'Aguardando reserva SAP'
+	'Aguardando material de SA'
+	'Aguardando entrega ao cliente'
+	'Enviado para suporte externo'
+	'Aguardando Reserva Almoxarifado' 
+
+	'Faturado Parcial'
+	'Faturado Total'
+
+
+	'Designado'
+	'Em Andamento'
+	'Pendente'
+	'Resolvido'
+
+	'Fechado'
+
+
+	Senhores, bom dia.
+
+ 
+
+Nos processos locação de rádios, quando houver cobrança inicial de material na instalação das estações móveis ou fixas, deverão ser abertas duas OS’s no SICOM.
+Uma OS será para registrar a locação em si: entrega e posterior devolução dos rádios.
+A outra OS será para registrar o fornecimento do material de instalação, que será cobrado imediatamente.
+Por serem processos distintos, locação e venda de material, faz-se necessário a abertura de duas OS para o correto controle.
+ 
+
+Gentileza passar a seguir o procedimento doravante.
+
+Designado:
+
+	Status inicial da OS, indica que a OS está aberta.
+ 
+
+Administrativo:
+
+                Aguardando aprovação do cliente - Após o envio da proposta ao cliente.
+                OS aprovada, aguardando reparo em campo - Caso a proposta seja aprova dependendo da sua natureza,
+                OS aprovada, aguardando reparo em laboratório - Caso a proposta seja aprova dependendo da sua natureza.
+Técnicos:
+
+                Em análise no laboratório - Quando o equipamento da OS estiver em analise
+                Aguardando envio de proposta - Após o fim da analise passar para este status para o administrativo fazer a proposta.
+                Aguardando ação do cliente - Quando o cliente tem pendencias que impedem o prosseguimento do atendimento.
+                Aguardando entrega ao cliente - Serviço pronto, porém não entregue ao cliente
+                Enviado para suporte externo - Quando o equipamento estiver em suporte externo.
+                Em Andamento - Quando o conserto ou atendimento estiver em andamento e sem pendencias
+                Aguardando ação do técnico - Serviço na fila de atendimento
+                Locado - Quando a entrega, de material de locação, tiver sido realiza ao cliente.
+ 
+
+Status que necessitam de inspecionar primeiro:
+
+ 
+
+Administrativo:
+
+                Faturado Parcial - Quando tiver pendencias no faturamento.
+                Faturado Total -  Quando todo material e MDO tiver sido faturado.
+                Proposta Não Aprovada - Caso a proposta tenha sido recusada, passando a OS para fechado em seguida.
+Técnicos:
+
+                Resolvido - Quando as atividades referentes a OS tiverem sido encerradas.
+                Devolvido - Quando TODOS materiais tiverem sido entregues SEM nenhuma avaria
+                Devolvido Parcial - Quando parte dos materiais tiverem sido entregues SEM nenhuma avaria
+                Devolvido com avaria - Quando parte dos materiais tiverem sido entregues COM nenhuma avaria
+Geral:
+
+                Fechado - Quando cliente tiver contrato para o serviço feito ou o administrativo verificar que todas pendencias financeiras foram quitadas pelo cliente
